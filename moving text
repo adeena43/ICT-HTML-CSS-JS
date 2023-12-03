@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<style>
+    marquee{
+      font-size: 30px;
+      font-weight: 800;
+      color: red;
+      font-family: sans-serif;
+      }
+</style>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body bgcolor ="pink">
+    <marquee >This is a moving text
+    </marquee>
+</body>
+</html>
