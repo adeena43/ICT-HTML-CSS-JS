@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <table border = "1">
+            <tr>
+            
+                    <th rowspan = "2">Name of train</th>
+                    <th rowspan = "2">Place</th>
+                    <th rowspan = "2">Destination</th>
+                    <th rowspan = "2">Train No.</th>
+                    <th colspan = "2">Time</th>
+                    <th rowspan = "2">Fare</th>
+                
+            </tr>
+            <tr>
+                <th>Arrival</th>
+                <th>Departure</th>
+            </tr>
+            <tr>
+                <td>Green Line</td>
+                <td>Kolkatta</td>
+                <td>Karachi</td>
+                <td>122</td>
+                <td>2 pm</td>
+                <td>3 am</td>
+                <td>20000</td>
+            </tr>
+        </table>
+    </div>
+
+</body>
+</html>
