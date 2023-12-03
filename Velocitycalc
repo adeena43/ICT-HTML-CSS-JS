@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="distance" id="distance">Distance: </label>
+    <input type="number" id="distanceInput" placeholder="Enter distance in m" required><br><hr>
+    <label for="time" id="time">Time: </label>
+    <input type="number" id="timeInput" placeholder="Enter time in m/s" required><br><hr>
+    <button style = "background-color: aqua;" onclick="calculateVelocity()">Calculate Velocity</button><br><hr>
+    <p id = "result"></p>
+</body>
+<script>
+function calculateVelocity() {
+    var distance = parseFloat(document.getElementById('distanceInput').value);
+    var time = parseFloat(document.getElementById('timeInput').value);
+
+    if(!(time))
+    {
+        alert('You have entered 0 for time, undefined!!');
+        return;
+    }
+    if (isNaN(distance) || isNaN(time)) {
+        alert('Please enter valid numeric values for distance and time.');
+        return;
+    }
+
+    var velocity = distance / time;
+    document.getElementById('result').innerHTML = 'Velocity: ' + velocity.toFixed(2) + ' m/s';
+}
+
+</script>
+</html>
+
