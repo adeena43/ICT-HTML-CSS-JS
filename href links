@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        a:link{
+            color: red;
+        }
+        a:visited{
+            color: green;
+        }
+        a:hover{
+            color: blue;
+        }
+        a:active{
+            color: orange;
+        }
+    </style>
+</head>
+<body>
+    <h1>Link styles example: </h1><br>
+    <p>this is a sample webpage demonstrating link styles: </p><br>
+    
+    <ul>
+        <li><a href="#" alink ="purple">Unvisited Link</a> </li>
+        <li><a href="#" vlink ="brown">visited Link</a></li>
+        <li><a href="#" alink ="red" vlink="green" link = "blue">Link with colors</a></li>
+        
+    </ul>
+</body>
+</html>
