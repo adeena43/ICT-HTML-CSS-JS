@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple Calculator</title>
+    <!-- <style>
+        input, output {
+            width: 50px;
+            text-align: center;
+        }
+    </style> -->
+</head>
+<body>
+
+    <!-- <h2>Simple Calculator</h2>
+    
+    <label for="num1">Number 1:</label>
+    <input type="number" id="num1" placeholder="Enter a number">
+    
+    <label for="num2">Number 2:</label>
+    <input type="number" id="num2" placeholder="Enter a number">
+    
+    <br>
+
+    <button onclick="add()">Addition</button>
+    <button onclick="subtract()">Subtraction</button>
+    <button onclick="multiply()">Multiplication</button>
+    <button onclick="divide()">Division</button>
+    <button onclick="exponential()">Exponential</button>
+
+    <br>
+
+    <label for="result">Result:</label>
+    <output id="result" readonly></output>
+
+    <script>
+        function add() {
+            calculate("add");
+        }
+
+        function subtract() {
+            calculate("subtract");
+        }
+
+        function multiply() {
+            calculate("multiply");
+        }
+
+        function divide() {
+            calculate("divide");
+        }
+
+        function exponential() {
+            calculate("exponential");
+        }
+
+        function calculate(operation) {
+            var num1 = parseFloat(document.getElementById("num1").value);
+            var num2 = parseFloat(document.getElementById("num2").value);
+            var resultField = document.getElementById("result");
+            var result;
+
+            switch (operation) {
+                case "add":
+                    result = num1 + num2;
+                    break;
+                case "subtract":
+                    result = num1 - num2;
+                    break;
+                case "multiply":
+                    result = num1 * num2;
+                    break;
+                case "divide":
+                    if (num2 !== 0) {
+                        result = num1 / num2;
+                    } else {
+                        alert("Cannot divide by zero!");
+                        result = "undefined";
+                    }
+                    break;
+                case "exponential":
+                    result = Math.pow(num1, num2);
+                    break;
+                default:
+                    result = "undefined";
+                    break;
+            }
+
+            resultField.textContent = result;
+        }
+    </script> -->
+
+    <b><h2>Simple Clculator</h2></b>
+    <label for="num1" id="num1">Enter number 1: </label>
+    <input type="number" id="num1Input" placeholder="Enter first number" required><br>
+    <label for="num2" id="num2">Enter number 2: </label>
+    <input type="number" id="num2Input" placeholder="Enter second number" required><br>
+
+    <br>
+    <!-- <button onclick = "add()">Addition</button> -->
+    <button onclick = "add()">Addition</button>
+    <button onclick = "subtract()">Subtract</button>
+    <button onclick = "multiply()">Multiply</button>
+    <button onclick = "divide()">Divide</button>
+    <button onclick = "exponential()">Exponential</button>
+    <br>
+
+    <label for="result" >Result: </label>
+    <output id="result" readonly></output>
+</body>
+<script>
+    function add(){
+        calculate("add");
+        
+    }
+
+    function subtract(){
+        calculate("subtract");
+        
+    }
+
+    function multiply(){
+        calculate("multiply");
+        
+    }
+
+    function divide(){
+        calculate("divide");
+        
+    }
+
+    function exponential(){
+        calculate("exponential");
+        
+    }
+
+
+    function calculate(operation){
+
+        var num1 = parseFloat(document.getElementById('num1Input').value);
+        var num2 = parseFloat(document.getElementById('num2Input').value);
+        var resultField = document.getElementById('result');
+        var result;
+        switch(operation){
+            case "add":
+                result = num1+num2;
+                break;
+
+            case "subtract":
+                result = num1-num2;
+                break;
+
+            case "multiply":
+                result = num1*num2;
+                break;
+
+            case "divide":
+                if(num2==0)
+                {
+                    alert("The input is invalid");
+                    result = "undefined";
+                }
+                result = num1/num2;
+                break;
+
+            case "exponential":
+                result = Math.pow(num1,num2);
+                break;
+        }
+
+        resultField.textContent = result;
+    }
+
+</script>
+</html>
