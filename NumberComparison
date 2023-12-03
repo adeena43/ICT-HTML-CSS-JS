@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="num1" id="">Number 1: </label>
+    <input type="number" id="num1" placeholder="Enter number 1" required><br><br>
+    <label for="num2" id="">Number 2: </label>
+    <input type="number" id="num2" placeholder="Enter number 2" required><br><br>
+    <button id="check" onclick="check()"> Check </button><br>
+    <p id = "output" style = "color: brown;"></p>
+</body>
+<script>
+    function check()
+{
+    var first = parseInt(document.getElementById("num1").value);
+    var second = parseInt(document.getElementById("num2").value);
+    var a;
+    if (first > second)
+    {
+        a = document.write("first number is greater than the second");
+    }
+        
+    else if (first < second)
+    {
+        a = document.write("second number is greater than the first");
+    }
+
+    else if (first == second){
+        a = document.write("both are equal");
+    }
+
+    document.getElementById("output").innerHTML = a;
+
+}
+</script>
+</html>
