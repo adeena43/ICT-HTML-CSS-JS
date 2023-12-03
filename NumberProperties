@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Number Properties Checker</title>
+    <!-- <script src="functions.js"></script> -->
+</head>
+<body>
+    <label for="numberInput">Enter a number: </label>
+    <input type="number" id="numberInput" placeholder="Enter a number" required>
+    <button onclick="checkNumberProperties()">Check Properties</button>
+    <p>The number is: </p>
+    <p id="result1" style="color: brown;"></p>
+    <p id="result2" style="color: blue;"></p>
+    <p id="result3" style="color: blue;"></p> 
+</body>
+</html> 
+
+<script>
+
+    function even() {
+        var a = document.getElementById("numberInput").value;
+        if(a % 2 === 0){
+            document.getElementById("result1").innerHTML = "Even";
+        }
+        
+    }
+    function odd() {
+        var a = document.getElementById("numberInput").value;
+        if(a%2 !== 0){
+            document.getElementById("result1").innerHTML = "Odd";
+        }
+    }
+    function prime() {
+        var a = document.getElementById("numberInput").value;
+        var isPrime = true;
+
+        if (a <= 1) {
+            isPrime = false;
+        } else {
+            for (var i = 2; i <= Math.sqrt(a); i++) {
+                if (a % i === 0) {
+                    isPrime = false;
+                    break;
+                }
+            }
+        }
+
+        var result = isPrime ? "Prime" : "Not prime";
+        document.getElementById("result2").innerHTML = result;
+    }
+
+    function mix(){
+        // document.getElementById("result1").innerHTML = "The number is ";
+        var a= document.getElementById("numberInput").value;
+        if(a>0){
+            document.getElementById("result3").innerHTML ="positive";
+        }
+        else{
+            document.getElementById("result3").innerHTML ="negative";
+        }
+    }
+    function checkNumberProperties(){
+        even();
+        odd();
+        prime();
+        mix();
+    }
+
+</script>
+
