@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="utils.css">
+</head>
+<body class="body">
+    <div class="body">
+        <div class = "header"><h1>Body Mass Index Calculator</h1></div>
+        <div class="input">
+        <label for="weight" id="weight" >Weight </label>
+        <input type="number" id ="weightInput" style = "background-color: rgb(78, 78, 202);" placeholder="Enter weight in kgs" required><br><br>
+        <label for="height" id="height" >Height </label>
+        <input type="number" id ="heightInput" style = "background-color: rgb(88, 88, 192);" placeholder = "Enter height in m" required><br><br>
+        <button class="button" onclick = "cal()">Calculate BMI</button>
+        <p id = "result"></p>
+         </div>
+
+    </div>
+</body>
+<script>
+    function cal()
+{
+    var a = parseFloat(document.getElementById("weightInput").value);
+    var b = parseFloat(document.getElementById("heightInput").value);
+
+    if(b !== 0)
+     {
+        var bmi = a/(b*b);
+        document.getElementById("result").innerHTML= "Result = "+ bmi;
+    }
+    else{
+        alert("Invalid value!!!");
+       return;
+     }
+}
+</script>
+</html>
