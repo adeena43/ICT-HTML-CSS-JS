@@ -1,0 +1,77 @@
+#include<iostream>
+#include<string.h>
+using namespace std;
+
+struct Event{
+	char name[50];
+	char date[50];
+	char venue[50];
+	char organizer[50];
+};
+
+void display(const Event& event)
+{
+	cout<<"------------------------------------------------------------------"<<endl;
+	cout<<"Event name: "<<event.name<<endl;
+	cout<<"Event date: "<<event.date<<endl;
+	cout<<"Event venue: "<<event.venue<<endl;
+	cout<<"Event organizer: "<<event.organizer<<endl;
+	cout<<"------------------------------------------------------------------"<<endl;
+}
+
+int main()
+{
+	int totalEvents;
+	cout<<"Enter the total number of events you want to manage: "<<endl;
+	cin>>totalEvents;
+	Event* events = new Event[totalEvents];
+	
+	for(int i =0; i<totalEvents; ++i)
+	{
+		cout<<"Enter the details for event "<<i+1<<" : "<<endl;
+		
+		cout<<"Enter name: ";
+		cin.ignore();
+		cin.getline(events[i].name, sizeof(events[i].name));
+		
+		cout<<"Enter date: ";
+		
+		cin.getline(events[i].date, sizeof(events[i].date));
+		
+		cout<<"Enter venue: ";
+		cin.ignore();
+		cin.getline(events[i].venue, sizeof(events[i].venue));
+		
+		cout<<"Enter organizer: ";
+		cin.ignore();
+		cin.getline(events[i].organizer, sizeof(events[i].organizer));
+	}
+	
+	cout<<"Display all the events: ";
+	for(int j=0; j<totalEvents; ++j)
+	{
+		display(events[j]);	
+	}
+	
+	//searching events for a particular date:
+	char searchDate[50];
+	cout<<"Enter the date on which you want the events: "<<endl;
+	cin>>searchDate;
+	cout<<"Event(s) on "<<searchDate<<" : "<<endl;
+	bool found = false;
+	for(int k =0; k<totalEvents;++k)
+	{
+		if(strcmp(events[k].date, searchDate)==0)
+		{
+			display(events[k]);
+			found = true;
+		}
+	}
+	if(!found)
+	{
+		cout<<"No matching dat events found";
+	}
+	delete[] events;
+	
+	return 0;
+}
